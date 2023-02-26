@@ -1,0 +1,8 @@
+@echo off
+
+rem Set the time for the scheduled shutdown
+set scheduled=22:00
+
+schtasks/create/sc once /tn "shutdown" /s /t 60" /st %schedule
+
+pause
